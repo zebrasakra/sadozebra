@@ -71,7 +71,7 @@ a {
 }
 
 a:hover {
-    color: #f6ac4d;
+    color: red;
 }
 
 /*
@@ -294,6 +294,8 @@ div#top_category {
 div#top_category h3 {
     font-size: 18px;
     font-weight: bold;
+    text-shadow: 1px 2px 3px #434343;
+    color: gold;
     background: url(images/category_icon.png) no-repeat left 8px;
     padding-left: 25px;
     border-bottom: 1px dotted #dcdddf;
@@ -302,7 +304,7 @@ div#top_category h3 {
 
 div#top_category ul li {
     font-size: 13px;
-    margin-bottom: 19px;
+    margin-bottom: 5px;
     line-height: 1;
 }
 
@@ -314,6 +316,33 @@ div#top_add {
     width: 280px;
     height: auto;
 }
+
+/* 日程リストの開閉 */
+.sche li{
+    /* width: fit-content;
+    width: -moz-fit-content; */
+    padding: 10px;
+    margin: 0.2rem auto;
+    background-color: lightblue;
+    color: black;
+    transition: .4s;
+  }
+  .sche li:hover {
+    /* cursor: pointer; */
+    color: red;
+    background-color: white;
+  }
+
+.parent ul{
+    display: none;
+  }
+/* .active {
+    background-color: lightgreen;
+  } */
+.active ul {
+    display: block;
+  }
+
 
 /* ========================================
     ライト
@@ -502,3 +531,123 @@ div#contact form input:hover {
     cursor: pointer;
 }
 
+@media (max-width: 600px) {
+    /* ↓ この部分追加 ↓ */
+    .nav {
+      grid-column: auto;
+      grid-row: auto;
+    }
+    .nav img {
+      height: auto;
+    }
+    /* ↑ ここまで追加 ↑  */
+  
+    .page-title {
+      font-size: 2.5rem;
+    }
+    .page-header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    /* HEADER */
+    .nav {
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+    .nav li {
+      margin: 0 20px;
+    }
+  
+    /* HOME */
+    .home-content {
+      margin-top: 20%;
+    }
+  
+    /* NEWS */
+    .news-contents {
+      flex-direction: column;
+    }
+    article,
+    aside {
+      width: 100%;
+    }
+  
+    /* ↓ この部分追加 ↓ */
+    #news .page-title {
+      margin-top: 30px;
+    }
+    aside {
+      margin-top: 60px;
+    }
+    .post-info {
+      margin-bottom: 30px;
+    }
+    .post-date {
+      width: 70px;
+      height: 70px;
+      font-size: 1rem;
+    }
+    .post-date span {
+      font-size: 0.875rem;
+      padding-top: 2px;
+    }
+    .post-title {
+      font-size: 1.375rem;
+    }
+    .post-cat {
+      font-size: 0.875rem;
+      margin-top: 10px;
+    }
+    .post-title,
+    .post-czt {
+      margin-left: 80px;
+    }
+  
+    .page-header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .ad {
+      display: none;
+    }
+  
+    /* ↓ この部分追加 ↓ */
+    /* MENU */
+    .menu-content {
+      margin-top: 20%;
+    }
+    /* ↑ ここまで追加 ↑ */
+  
+    /* ↓ この部分追加 ↓ */
+    /* CONTACT */
+    #contact .page-title {
+      margin-top: 40px;
+    }
+  
+    /* フォーム */
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      max-width: 100%;
+    }
+    /* ↑ ここまで追加 ↑ */
+  
+    /* ↓ この部分追加 ↓ */
+    /* 店舗情報・地図 / SNS */
+    #location .wrapper,
+    #sns .wrapper {
+      flex-direction: column;
+    }
+    .location-info,
+    .location-map,
+    .sns-box {
+      width: 100%;
+    }
+    .sns-box {
+      margin-bottom: 30px;
+    }
+    /* ↑ ここまで追加 ↑ */
+  }
+  
